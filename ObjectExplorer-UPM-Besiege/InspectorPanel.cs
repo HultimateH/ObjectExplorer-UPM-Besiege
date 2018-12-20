@@ -14,7 +14,7 @@ namespace ObjectExplorerMod
 
         private const string FIELD_EDIT_INPUT_NAME = "field_edit_input";
 
-        public static bool autoUpdate = false;
+        public static bool autoUpdate = true;
 
         private MemberValue activeMember;
         private FieldType activeMemberFieldType = FieldType.Normal;
