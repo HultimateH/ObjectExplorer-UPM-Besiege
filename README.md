@@ -4,7 +4,7 @@ fork form： https://github.com/spaar/besiege-modloader
 
 Object Explorer Mod running through UPM, has no security restrictions, so you can see more information
 
-# install：
+# Install：
 Download the attachment file and unzip it in the game root directory if you install UPM
 
 # 安装：
