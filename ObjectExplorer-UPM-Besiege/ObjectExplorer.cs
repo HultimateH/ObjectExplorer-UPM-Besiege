@@ -16,24 +16,23 @@ namespace ObjectExplorerMod
         public HierarchyPanel HierarchyPanel { get; private set; }
         public InspectorPanel InspectorPanel { get; private set; }
 
-        private readonly int windowID = Modding.ModUtility.GetWindowId();
+        private readonly int windowID = ModUtility.GetWindowId();
         private Rect windowRect = new Rect(20, 20, 800, 600);
-        private MKey key;
-
+       
         public bool IsVisible = false;
 
         private void Start()
         {
+            //DontDestroyOnLoad(Instance);
             HierarchyPanel = gameObject.AddComponent<HierarchyPanel>();
             InspectorPanel = gameObject.AddComponent<InspectorPanel>();
-            key = new MKey("Show", "Show", KeyCode.O);
         }
 
         private void Update()
         {
-            if (key.IsPressed)
+            if (Input.GetKey(KeyCode.LeftControl) && Input.GetKeyDown(KeyCode.O))
             {
-                IsVisible = !IsVisible;
+                ObjectExplorer.Instance.IsVisible = !ObjectExplorer.Instance.IsVisible;
             }
         }
 

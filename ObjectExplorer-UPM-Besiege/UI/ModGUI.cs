@@ -7,7 +7,7 @@ namespace ObjectExplorerMod.UI
     // It was adapated for this project.
     public class ModGUI : SingleInstance<ModGUI>
     {
-        public override string Name { get { return "Object Explorer Mod: GUI Util"; } }
+        public override string Name { get { return "GUI Util"; } }
 
         /// <summary>
         /// The GUISkin used by the modloader and all mod's default config menus.
@@ -23,8 +23,8 @@ namespace ObjectExplorerMod.UI
 
         void Awake()
         {
-            //ModLoader.Internal.ModLoader.MakeModule(this);
-            DontDestroyOnLoad(Instance);
+            //ModLoader.Internal.ModLoader.MakeModule(this);         
+            transform.SetParent(ObjectExplorer.Instance.transform);
             // Not calling RebuildSkin(), because it will
             // be called when Elements is rebuilt.
         }

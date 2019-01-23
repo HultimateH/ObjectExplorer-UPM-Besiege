@@ -5,7 +5,7 @@ using System.Text;
 using PluginManager.Plugin;
 using UnityEngine;
 
-namespace ObjectExplore
+namespace ObjectExplorerMod
 {
 
     ///  https://github.com/spaar/besiege-modloader
@@ -14,13 +14,12 @@ namespace ObjectExplore
     [OnGameInit]
     public class Mod : MonoBehaviour
     {
-        GameObject mod = new GameObject("Object Explore - UPM Edition");
-        
+        GameObject mod ;
+
         void Start()
         {
-            mod.AddComponent<ObjectExplorerMod.ObjectExplorer>();
+            mod = ObjectExplorer.Instance.gameObject;
             DontDestroyOnLoad(mod);
         }
-
     }
 }
